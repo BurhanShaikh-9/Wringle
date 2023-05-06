@@ -1,6 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import { ROUTES } from '../../utils/Routes';
 
 export const HomePage = () => {
+    const navigate = useNavigate();
     return (
         <React.Fragment>
             <div className="page">
@@ -26,19 +29,22 @@ export const HomePage = () => {
                                     <div className="bottom">
                                         <a href="">Terms & Conditions</a>
                                         <div className="acceptTerms">
-                                            <input type="checkbox" />
-                                            <span>Accept</span>
+                                            <input type="checkbox" id='acceptTerms' />
+                                            <label htmlFor='accceptTerms'>Accept</label>
+                                        </div>
+                                        <div className="startButton">
+                                            <button onClick={()=>{navigate(ROUTES.CHATROOM)}}>Start</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="secondSection">
+                            {/* <div className="secondSection">
                                 <div className="inner">
                                     <div className="startButton">
                                         <button type='button' onClick={()=>{console.log('buttonClicked')}}>Start</button>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

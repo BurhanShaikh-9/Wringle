@@ -29,8 +29,8 @@
 
 .container {
   max-width: 100%;
-  padding-right: 180px;
-  padding-left: 180px;
+  padding-right: 100px;
+  padding-left: 100px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -133,7 +133,7 @@
   flex-wrap: wrap;
 }
 .page .homepage .homepageInner .firstSection {
-  width: 60%;
+  width: 100%;
 }
 .page .homepage .homepageInner .firstSection .inner {
   border: 1px solid rgb(231, 231, 231);
@@ -171,6 +171,23 @@
   align-items: center;
   gap: 5px;
 }
+.page .homepage .homepageInner .firstSection .inner .bottom .startButton {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.page .homepage .homepageInner .firstSection .inner .bottom .startButton button {
+  color: white;
+  background-color: #171c63;
+  border-radius: 30px;
+  font-size: 16px;
+  padding: 10px 30px;
+  box-shadow: inset 0px 0px 8px 2px rgba(255, 255, 255, 0.36);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
 .page .homepage .homepageInner .secondSection {
   width: 40%;
 }
@@ -203,6 +220,209 @@
   -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
           clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
+.page .chatRoom .subHeader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 95.5%;
+  border: 1px solid rgb(231, 231, 231);
+  padding: 20px;
+  border-radius: 40px;
+  margin-bottom: 50px;
+}
+.page .chatRoom .subHeader .subHeaderInner {
+  width: 42.5%;
+}
+.page .chatRoom .subHeader .subHeaderInner label {
+  width: 30%;
+}
+.page .chatRoom .subHeader .subHeaderInner input {
+  border: 1px solid rgb(231, 231, 231);
+  width: 70%;
+  border-radius: 25px;
+  margin-left: 20px;
+  height: 33px;
+}
+.page .chatRoom .subHeader .startButton {
+  width: 15%;
+}
+.page .chatRoom .subHeader .startButton button {
+  color: white;
+  background-color: #171c63;
+  border-radius: 30px;
+  font-size: 16px;
+  padding: 10px 30px;
+  box-shadow: inset 0px 0px 8px 2px rgba(255, 255, 255, 0.36);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  height: 33px;
+  font-size: 14px;
+}
+.page .chatRoom .allChatBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.page .chatRoom .allChatBox .singleChatBox {
+  border-radius: 25px;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+  border: 1px solid rgb(231, 231, 231);
+}
+.page .chatRoom .allChatBox .singleChatBox .picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page .chatRoom .allChatBox .singleChatBox .picture img {
+  width: 90px;
+  height: 90px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+  border: 1px solid rgb(231, 231, 231);
+}
+.page .chatRoom .allChatBox .singleChatBox .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page .chatRoom .allChatBox .singleChatBox .title p {
+  font-weight: bold;
+}
+.page .chatRoom .allChatBox .singleChatBox .control {
+  width: 100%;
+  border: 1px solid rgb(231, 231, 231);
+  border-radius: 20px;
+}
+.page .chatRoom .allChatBox .singleChatBox .control .toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  position: relative;
+}
+.page .chatRoom .allChatBox .singleChatBox .control .toggle-input {
+  display: none;
+}
+.page .chatRoom .allChatBox .singleChatBox .control .toggle-label {
+  padding: 0 10px;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  width: 33.33%;
+  min-width: 70px;
+  height: 100%;
+  line-height: 30px;
+  color: #171c63;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  transition: color 0.1s, background-color 0.3s;
+}
+.page .chatRoom .allChatBox .singleChatBox .control .toggle-label-left {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.page .chatRoom .allChatBox .singleChatBox .control .toggle-label-right {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.page .chatRoom .allChatBox .singleChatBox .control .toggle-input:checked + .toggle-label {
+  color: #fff;
+  background-color: #171c63;
+}
+.page .chatRoom .allChatBox .singleChatBox .control .toggle-selection {
+  position: absolute;
+  height: 100%;
+  width: 33.33%;
+  top: 0;
+  left: 33.33%;
+  display: none;
+  background-color: #171c63;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.page .chatRoom .allChatBox .singleChatBox .control .toggle1:checked ~ .toggle-selection {
+  display: block;
+  left: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.page .chatRoom .allChatBox .singleChatBox .control .toggle2:checked ~ .toggle-selection {
+  left: 33.33%;
+  display: block;
+}
+.page .chatRoom .allChatBox .singleChatBox .control .toggle3:checked ~ .toggle-selection {
+  display: block;
+  left: 66.66%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.page .chatting .chattingInner .videoSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 7px;
+}
+.page .chatting .chattingInner .videoSection .person {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page .chatting .chattingInner .videoSection .person img {
+  border-radius: 25px 0 0 25px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.page .chatting .chattingInner .videoSection .person1 {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page .chatting .chattingInner .videoSection .person1 img {
+  border-radius: 0 25px 25px 0;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.page .chatting .chattingInner .menuButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.page .chatting .chattingInner .menuButtons .menuInner {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page .chatting .chattingInner .menuButtons .menuInner .topicName {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page .chatting .chattingInner .menuButtons .menuInner .switchButton {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
 @media only screen and (max-width: 1200px) {
   .container {
@@ -217,6 +437,27 @@
   }
   .homepage .homepageInner .firstSection {
     width: 90% !important;
+  }
+  .chatRoom .subHeader {
+    padding: 20px 0 !important;
+    gap: 25px;
+  }
+  .chatRoom .subHeader .subHeaderInner {
+    width: 100% !important;
+    margin: 0px 20px;
+  }
+  .chatRoom .subHeader .subHeaderInner label {
+    display: block;
+  }
+  .chatRoom .subHeader .subHeaderInner input {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  .chatRoom .subHeader .startButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -242,5 +483,9 @@
   .container {
     padding-right: 20px;
     padding-left: 20px;
+  }
+  .numbers {
+    font-size: 20px !important;
+    height: 20px !important;
   }
 }/*# sourceMappingURL=App.css.map */
