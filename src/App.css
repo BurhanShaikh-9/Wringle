@@ -408,26 +408,133 @@
 .page .chatting .chattingInner .menuButtons .menuInner {
   width: 80%;
   display: flex;
+  padding: 15px;
   justify-content: center;
   align-items: center;
 }
 .page .chatting .chattingInner .menuButtons .menuInner .topicName {
-  width: 40%;
+  width: 35%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.page .chatting .chattingInner .menuButtons .menuInner .topicName button {
+  color: white;
+  background-color: #171c63;
+  border-radius: 30px;
+  font-size: 16px;
+  padding: 10px 30px;
+  box-shadow: inset 0px 0px 8px 2px rgba(255, 255, 255, 0.36);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  background-color: rgb(226, 226, 226);
+  color: #171c63;
+  padding: 7px 25px;
+}
 .page .chatting .chattingInner .menuButtons .menuInner .switchButton {
-  width: 60%;
+  width: 65%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+.page .chatting .chattingInner .menuButtons .menuInner .switchButton button {
+  color: white;
+  background-color: #171c63;
+  border-radius: 30px;
+  font-size: 16px;
+  padding: 10px 30px;
+  box-shadow: inset 0px 0px 8px 2px rgba(255, 255, 255, 0.36);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  padding: 7px 25px;
+}
+.page .chatting .chattingInner .chatSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page .chatting .chattingInner .chatSection .chatInner {
+  width: 80%;
+  border: 1px solid rgb(231, 231, 231);
+  padding: 20px;
+  border-radius: 20px;
+}
+.page .chatting .chattingInner .chatSection .chatInner .inputChat {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.page .chatting .chattingInner .chatSection .chatInner .inputChat input {
+  border: 1px solid rgb(231, 231, 231);
+  width: 100%;
+  height: 30px;
+  border-radius: 25px;
+}
+.page .chatting .chattingInner .chatSection .chatInner .inputChat .sendButton {
+  position: absolute;
+  right: 20px;
+}
+.page .chatting .chattingInner .chatSection .chatInner .inputChat .sendButton button {
+  color: #e94929;
+  font-size: 15px;
+  background-color: white;
+  cursor: pointer;
+}
+.page .chatting .chattingInner .chatSection .chatInner .wrapper {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  gap: 10px;
+  max-height: 150px;
+}
+.page .chatting .chattingInner .chatSection .chatInner .wrapper .message1 {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+  padding-left: 30px;
+}
+.page .chatting .chattingInner .chatSection .chatInner .wrapper .message1 p {
+  background-color: rgba(233, 73, 41, 0.1568627451);
+  color: #e94929;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 20px;
+}
+.page .chatting .chattingInner .chatSection .chatInner .wrapper .message2 {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+}
+.page .chatting .chattingInner .chatSection .chatInner .wrapper .message2 p {
+  background-color: rgba(23, 28, 99, 0.1529411765);
+  color: #171c63;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 20px;
 }
 
 @media only screen and (max-width: 1200px) {
   .container {
     padding-right: 150px;
     padding-left: 150px;
+  }
+  .menuButtons .menuInner .topicName {
+    width: 50% !important;
+  }
+  .menuButtons .menuInner .switchButton {
+    width: 50% !important;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -459,6 +566,21 @@
     align-items: center;
     width: 100% !important;
   }
+  .menuButtons .menuInner .topicName {
+    width: 50% !important;
+  }
+  .menuButtons .menuInner .topicName p {
+    font-size: 14px;
+  }
+  .menuButtons .menuInner .topicName button {
+    font-size: 14px !important;
+  }
+  .menuButtons .menuInner .switchButton {
+    width: 50% !important;
+  }
+  .menuButtons .menuInner .switchButton button {
+    font-size: 14px !important;
+  }
 }
 @media only screen and (max-width: 768px) {
   .container {
@@ -478,6 +600,23 @@
   .header .headerInner .headerSecond {
     width: 40%;
   }
+  .menuButtons .menuInner .topicName {
+    width: 50% !important;
+  }
+  .menuButtons .menuInner .topicName p {
+    font-size: 12px;
+  }
+  .menuButtons .menuInner .topicName button {
+    font-size: 12px !important;
+    padding: 7px 19px !important;
+  }
+  .menuButtons .menuInner .switchButton {
+    width: 50% !important;
+  }
+  .menuButtons .menuInner .switchButton button {
+    font-size: 12px !important;
+    padding: 7px 19px !important;
+  }
 }
 @media only screen and (max-width: 576px) {
   .container {
@@ -487,5 +626,22 @@
   .numbers {
     font-size: 20px !important;
     height: 20px !important;
+  }
+  .menuButtons .menuInner .topicName {
+    width: 50% !important;
+  }
+  .menuButtons .menuInner .topicName p {
+    font-size: 12px;
+  }
+  .menuButtons .menuInner .topicName button {
+    font-size: 12px !important;
+    padding: 7px 19px !important;
+  }
+  .menuButtons .menuInner .switchButton {
+    width: 50% !important;
+  }
+  .menuButtons .menuInner .switchButton button {
+    font-size: 12px !important;
+    padding: 7px 19px !important;
   }
 }/*# sourceMappingURL=App.css.map */
