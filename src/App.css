@@ -461,8 +461,9 @@
   align-items: center;
 }
 .page .chatting .chattingInner .menuButtons .menuInner .topicName {
-  width: 35%;
+  width: 100%;
   display: flex;
+  font-size: 12px;
   justify-content: space-between;
   align-items: center;
 }
@@ -477,11 +478,12 @@
   position: relative;
   outline: none;
   background-color: rgb(226, 226, 226);
+  white-space: nowrap;
   color: #171c63;
+  font-size: 12px;
   padding: 7px 25px;
 }
 .page .chatting .chattingInner .menuButtons .menuInner .switchButton {
-  width: 65%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -496,7 +498,12 @@
   cursor: pointer;
   position: relative;
   outline: none;
+  font-size: 12px;
+  white-space: nowrap;
   padding: 7px 25px;
+}
+.page .chatting .chattingInner .menuButtons .menuInner .switchButton button .nextIcon {
+  color: white;
 }
 .page .chatting .chattingInner .chatSection {
   width: 100%;
@@ -508,7 +515,38 @@
   width: 80%;
   border: 1px solid rgb(231, 231, 231);
   padding: 20px;
+  position: relative;
   border-radius: 20px;
+}
+.page .chatting .chattingInner .chatSection .chatInner .ReportButton.visible {
+  opacity: 1;
+}
+.page .chatting .chattingInner .chatSection .chatInner .ReportButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.page .chatting .chattingInner .chatSection .chatInner .ReportButton .moreButton {
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 3px 6px 3px 6px;
+  background-color: #e94929;
+  color: white;
+  font-size: 12px;
+}
+.page .chatting .chattingInner .chatSection .chatInner .ReportButton .innerButton {
+  position: relative;
+}
+.page .chatting .chattingInner .chatSection .chatInner .ReportButton .innerButton .reportInner {
+  padding: 7px 10px;
+  top: -65px;
+  background-color: white;
+  cursor: pointer;
+  left: -82px;
+  border-radius: 5px;
+  position: absolute;
 }
 .page .chatting .chattingInner .chatSection .chatInner .inputChat {
   margin-top: 20px;
@@ -651,10 +689,7 @@
     padding-left: 120px;
   }
   .menuButtons .menuInner .topicName {
-    width: 50% !important;
-  }
-  .menuButtons .menuInner .switchButton {
-    width: 50% !important;
+    width: 100% !important;
   }
   .firstSection .inner .wrapper .innerFirst {
     width: 100% !important;
@@ -693,19 +728,16 @@
     width: 100% !important;
   }
   .menuButtons .menuInner .topicName {
-    width: 50% !important;
+    width: 100% !important;
   }
   .menuButtons .menuInner .topicName p {
-    font-size: 14px;
+    font-size: 12px;
   }
   .menuButtons .menuInner .topicName button {
-    font-size: 14px !important;
-  }
-  .menuButtons .menuInner .switchButton {
-    width: 50% !important;
+    font-size: 12px !important;
   }
   .menuButtons .menuInner .switchButton button {
-    font-size: 14px !important;
+    font-size: 12px !important;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -727,7 +759,7 @@
     width: 40%;
   }
   .menuButtons .menuInner .topicName {
-    width: 50% !important;
+    width: 100% !important;
   }
   .menuButtons .menuInner .topicName p {
     font-size: 12px;
@@ -735,9 +767,6 @@
   .menuButtons .menuInner .topicName button {
     font-size: 12px !important;
     padding: 7px 19px !important;
-  }
-  .menuButtons .menuInner .switchButton {
-    width: 50% !important;
   }
   .menuButtons .menuInner .switchButton button {
     font-size: 12px !important;
@@ -754,7 +783,7 @@
     height: 20px !important;
   }
   .menuButtons .menuInner .topicName {
-    width: 50% !important;
+    width: 100% !important;
   }
   .menuButtons .menuInner .topicName p {
     font-size: 12px;
@@ -762,9 +791,6 @@
   .menuButtons .menuInner .topicName button {
     font-size: 12px !important;
     padding: 7px 19px !important;
-  }
-  .menuButtons .menuInner .switchButton {
-    width: 50% !important;
   }
   .menuButtons .menuInner .switchButton button {
     font-size: 12px !important;
