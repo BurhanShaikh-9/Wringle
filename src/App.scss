@@ -172,7 +172,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     height: 60px;
+    font-size: 14px;
+    text-align: center;
+    gap: 10px;
   }
 }
 
@@ -241,6 +245,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            width: 100%;
             margin-top: 20px;
             flex-wrap: wrap;
             .acceptTerms {
@@ -633,6 +638,23 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+  .privacyPolicy{
+    .privacyInner{
+      h1{
+        color: #171c63;
+        margin-bottom: 30px;
+      }
+      .aboutPara{
+        margin-bottom: 10px;
+      }
+      ul{
+        list-style:decimal;
+        li{
+          margin-bottom: 10px
         }
       }
     }

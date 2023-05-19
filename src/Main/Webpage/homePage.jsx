@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ROUTES } from '../../utils/Routes';
 
 export const HomePage = () => {
@@ -27,7 +27,7 @@ export const HomePage = () => {
                                                 </p>
                                             </div>
                                             <div className="bottom">
-                                                {/* <a href="">Google Auth here</a> */}
+                                                {/* <Link to={ROUTES.PRIVACY}>Privacy & Policy</Link> */}
                                                 <div className="acceptTerms">
                                                     <input type="checkbox" id='acceptTerms' />
                                                     <label htmlFor='accceptTerms'>Accept</label>
@@ -41,13 +41,6 @@ export const HomePage = () => {
 
                                 </div>
                             </div>
-                            {/* <div className="secondSection">
-                                <div className="inner">
-                                    <div className="startButton">
-                                        <button type='button' onClick={()=>{console.log('buttonClicked')}}>Start</button>
-                                    </div>
-                                </div>
-                            </div> */}
                         </div>
                     </div>
                 </div>
