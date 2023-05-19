@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import person1 from "../../assets/images/girl1.png";
 import { BsSendFill, BsFillFlagFill } from 'react-icons/bs';
 import { AiOutlineExclamationCircle } from 'react-icons/ai';
+import Modal from 'react-bootstrap/Modal';
 
 import { FiMoreHorizontal } from 'react-icons/fi';
 // import Modal from 'react-bootstrap/Modal';
