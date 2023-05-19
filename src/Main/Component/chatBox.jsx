@@ -14,40 +14,40 @@ export const ChatBox = ({radioId}) => {
         <div className="control">
           <div className="toggle">
             <input
-              id={`toggle11 - ${radioId}`}
+              id={`toggle11-${radioId}`}
               className="toggle-input toggle1"
-              name="toggle"
+              name={`toggle${radioId}`}
               value="1"
               type="radio"
             />
-            <label htmlFor={`toggle11 - ${radioId}`} className="toggle-label toggle-label-left">
+            <label htmlFor={`toggle11-${radioId}`} className="toggle-label toggle-label-left">
               With
             </label>
 
             <input
-              id={`toggle12 - ${radioId}`}
+              id={`toggle12-${radioId}`}
               className="toggle-input toggle2"
-              name="toggle"
+              name={`toggle${radioId}`}
               value="2"
               type="radio"
               
             />
             <label
-              htmlFor={`toggle12 - ${radioId}`}
+              htmlFor={`toggle12-${radioId}`}
               className="toggle-label toggle-label-middle"
             >
               Moderate
             </label>
 
             <input
-              id={`toggle13 - ${radioId}`}
+              id={`toggle13-${radioId}`}
               className="toggle-input toggle3"
-              name="toggle"
+              name={`toggle${radioId}`}
               value="3"
               type="radio"
             />
             <label
-              htmlFor={`toggle13 - ${radioId}`}
+              htmlFor={`toggle13-${radioId}`}
               className="toggle-label toggle-label-right"
             >
               Against

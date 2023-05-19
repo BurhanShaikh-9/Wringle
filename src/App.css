@@ -53,6 +53,9 @@
   width: 85%;
   gap: 80px;
 }
+.header .headerInner .headerFirst a {
+  text-decoration: none;
+}
 .header .headerInner .headerFirst .logo {
   display: flex;
   justify-content: flex-start;
@@ -84,7 +87,6 @@
   gap: 10px;
   height: 20px;
   align-items: center;
-  background-color: rgb(255, 255, 242);
   padding: 20px;
   border-radius: 20%;
 }
@@ -138,24 +140,38 @@
 .page .homepage .homepageInner .firstSection .inner {
   border: 1px solid rgb(231, 231, 231);
   border-radius: 40px;
-  padding: 0px 40px 2rem 40px;
+  padding: 0px 0 2rem 0;
 }
-.page .homepage .homepageInner .firstSection .inner .innerFirst h1 {
+.page .homepage .homepageInner .firstSection .inner .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.page .homepage .homepageInner .firstSection .inner .wrapper .upper {
+  width: 35%;
+  min-width: 337px;
+}
+.page .homepage .homepageInner .firstSection .inner .wrapper .lower {
+  width: 55%;
+}
+.page .homepage .homepageInner .firstSection .inner .wrapper .innerFirst h1 {
   color: #171c63;
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
-.page .homepage .homepageInner .firstSection .inner .innerFirst .aboutUs {
+.page .homepage .homepageInner .firstSection .inner .wrapper .innerFirst .aboutUs {
   border: 1px solid rgb(231, 231, 231);
   padding: 30px 40px;
   border-radius: 40px;
 }
-.page .homepage .homepageInner .firstSection .inner .innerFirst .termsConditions {
+.page .homepage .homepageInner .firstSection .inner .wrapper .innerFirst .termsConditions {
   border: 1px solid rgb(231, 231, 231);
   padding: 30px 40px;
   border-radius: 40px;
 }
-.page .homepage .homepageInner .firstSection .inner .innerFirst .termsConditions p {
+.page .homepage .homepageInner .firstSection .inner .wrapper .innerFirst .termsConditions p {
   height: 350px;
   overflow-y: auto;
 }
@@ -164,6 +180,7 @@
   justify-content: space-around;
   align-items: center;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 .page .homepage .homepageInner .firstSection .inner .bottom .acceptTerms {
   display: flex;
@@ -235,13 +252,13 @@
   width: 42.5%;
 }
 .page .chatRoom .subHeader .subHeaderInner label {
-  width: 30%;
+  width: 15%;
+  white-space: nowrap;
 }
 .page .chatRoom .subHeader .subHeaderInner input {
   border: 1px solid rgb(231, 231, 231);
-  width: 70%;
+  width: 80%;
   border-radius: 25px;
-  margin-left: 20px;
   height: 33px;
 }
 .page .chatRoom .subHeader .startButton {
@@ -257,6 +274,7 @@
   cursor: pointer;
   position: relative;
   outline: none;
+  padding: 5px 30px;
   height: 33px;
   font-size: 14px;
 }
@@ -392,12 +410,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .page .chatting .chattingInner .videoSection .person1 img {
   border-radius: 0 25px 25px 0;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.page .chatting .chattingInner .videoSection .person1 .ReportButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.page .chatting .chattingInner .videoSection .person1 .ReportButton .moreButton {
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px 9px 7px 9px;
+  background-color: #e94929;
+  color: white;
+}
+.page .chatting .chattingInner .videoSection .person1 .ReportButton .innerButton {
+  position: relative;
+}
+.page .chatting .chattingInner .videoSection .person1 .ReportButton .innerButton .reportInner {
+  padding: 7px 10px;
+  top: -65px;
+  background-color: white;
+  cursor: pointer;
+  left: -82px;
+  border-radius: 5px;
+  position: absolute;
 }
 .page .chatting .chattingInner .menuButtons {
   display: flex;
@@ -525,16 +568,81 @@
   border-radius: 20px;
 }
 
+.modalMain .modalBody p svg {
+  font-size: 27px;
+}
+.modalMain .modalBody .reportsToggle {
+  margin: 10px 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.modalMain .modalBody .reportsToggle .reportValues label {
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 8px 12px;
+  background-color: rgba(241, 241, 241, 0.5490196078);
+  cursor: pointer;
+}
+.modalMain .modalBody .reportsToggle .reportValues label:hover {
+  background-color: #e6e6e6;
+}
+.modalMain .modalBody .reportsToggle .reportValues input[type=radio] {
+  display: none;
+}
+.modalMain .modalBody .reportsToggle .reportValues input[type=radio]:checked + label,
+.modalMain .modalBody .reportsToggle .reportValues .Checked + label {
+  background: #e94929;
+  color: white;
+}
+.modalMain .modalBody .reportMessage {
+  margin: 10px 30px;
+}
+.modalMain .modalBody .reportMessage textArea {
+  border-radius: 20px;
+  resize: none;
+  outline: none;
+  padding: 10px 10px;
+  border: 1px solid rgb(231, 231, 231);
+  width: 100%;
+}
+.modalMain .modalBody .submitButton {
+  margin: 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalMain .modalBody .submitButton button {
+  color: white;
+  background-color: #171c63;
+  border-radius: 30px;
+  font-size: 16px;
+  padding: 10px 30px;
+  box-shadow: inset 0px 0px 8px 2px rgba(255, 255, 255, 0.36);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
 @media only screen and (max-width: 1200px) {
   .container {
-    padding-right: 150px;
-    padding-left: 150px;
+    padding-right: 120px;
+    padding-left: 120px;
   }
   .menuButtons .menuInner .topicName {
     width: 50% !important;
   }
   .menuButtons .menuInner .switchButton {
     width: 50% !important;
+  }
+  .firstSection .inner .wrapper .innerFirst {
+    width: 100% !important;
+  }
+  .homepage .homepageInner .firstSection .inner {
+    padding: 0px 20px 2rem 20px !important;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -620,8 +728,8 @@
 }
 @media only screen and (max-width: 576px) {
   .container {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
   }
   .numbers {
     font-size: 20px !important;
@@ -643,5 +751,65 @@
   .menuButtons .menuInner .switchButton button {
     font-size: 12px !important;
     padding: 7px 19px !important;
+  }
+  .homepageInner .firstSection .inner .bottom a {
+    flex-grow: 1;
+  }
+  .homepageInner .firstSection .inner .wrapper .upper {
+    min-width: 255px !important;
+  }
+  .homepageInner .firstSection .inner .wrapper .lower {
+    min-width: 255px !important;
+  }
+  .homepageInner .firstSection .inner .wrapper .innerFirst h1 {
+    font-size: 29px !important;
+  }
+  .homepageInner .firstSection .inner .wrapper .innerFirst .aboutUs {
+    padding: 15px 20px !important;
+    font-size: 14px !important;
+  }
+  .header .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .modalMain .modalHeaderTitle {
+    font-size: 16px !important;
+  }
+  .modalMain .modalBody .bodyTitle {
+    font-size: 14px;
+  }
+  .modalMain .modalBody .reportsToggle {
+    margin: 10px 10px !important;
+  }
+  .modalMain .modalBody .reportsToggle .reportValues label {
+    font-size: 12px;
+  }
+  .modalMain .modalBody .reportMessage {
+    margin: 10px 10px !important;
+  }
+  .modalMain .modalBody .reportMessage textArea {
+    border-radius: 20px;
+    resize: none;
+    outline: none;
+    padding: 10px 10px;
+    border: 1px solid rgb(231, 231, 231);
+    width: 100%;
+  }
+  .modalMain .modalBody .submitButton {
+    margin: 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modalMain .modalBody .submitButton button {
+    color: white;
+    background-color: #171c63;
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 10px 30px;
+    box-shadow: inset 0px 0px 8px 2px rgba(255, 255, 255, 0.36);
+    cursor: pointer;
+    position: relative;
+    outline: none;
   }
 }/*# sourceMappingURL=App.css.map */
