@@ -17,6 +17,7 @@ import { FiMoreHorizontal } from 'react-icons/fi';
 export const ChatScreen = () => {
 
   const [reportButton, setReportButton] = useState(false);
+  const [reportButton2, setReportButton2] = useState(false);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -70,37 +71,40 @@ export const ChatScreen = () => {
               </div>
               <div className="chatSection">
                 <div className="chatInner" id="chatInnerId" onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}>
+                  onMouseLeave={handleMouseLeave}>
                   <div className="wrapper">
-                    <div className="message1">
-                      <p>Hey</p>
+                    <div className="message1" onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}>
+                      <div className="messageBox">
+                        <p>
+                          Hello There, how's going?
+
+                        </p>
+
+                        <div className={`ReportButton ${reportButtonVisible ? 'visible' : ''}`}>
+                          <button className="moreButton" onClick={() => { setReportButton2(!reportButton2) }}><FiMoreHorizontal /></button>
+                          {console.log(reportButton2)}
+                          {
+                            reportButton2 &&
+                            <div className="innerButton">
+                              <button className="reportInner" onClick={handleShow}> <BsFillFlagFill /> Report</button>
+                            </div>
+                          }
+                        </div>
+                      </div>
+
+
                     </div>
-                    <div className="message1">
-                      <p>Hey</p>
-                    </div>
-                    <div className="message1">
-                      <p>Hey</p>
-                    </div>
+
                     <div className="message2">
                       <p>hello</p>
                     </div>
                     <div className="message2">
-                      <p>hello</p>
+                      <p>It's fine</p>
                     </div>
-                    <div className="message2">
-                      <p>hello</p>
-                    </div>
+
                   </div>
 
-                  <div className={`ReportButton ${reportButtonVisible ? 'visible' : ''}`}>
-                    <button className="moreButton" onClick={() => { setReportButton(!reportButton) }}><FiMoreHorizontal /></button>
-                    {
-                      reportButton &&
-                      <div className="innerButton">
-                        <button className="reportInner" onClick={handleShow}> <BsFillFlagFill /> Report</button>
-                      </div>
-                    }
-                  </div>
 
                   <div className="inputChat">
                     <input type="text" />
