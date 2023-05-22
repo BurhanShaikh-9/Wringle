@@ -1,13 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ROUTES } from '../../utils/Routes';
+import ReCAPTCHA from "react-google-recaptcha";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const HomePage = () => {
     const navigate = useNavigate();
+    function onChange(value) {
+        console.log("Captcha value:", value);
+        if (value) {
+            navigate(ROUTES.CHATROOM)
+        }
+    }
+    const [isCaptcha, setIsCaptcha] = useState(false);
+    const [isChecked, setIsChecked] = useState(false);
+
+    const buttonOnClick = () => {
+        console.log("functionClicked")
+        if(!isChecked){
+            toast.error("Accept Terms and Conditions")
+        }
+        else{
+            setIsCaptcha(true);
+        }
+    }
+
     return (
         <React.Fragment>
+            <div>
+                {/* <button onClick={notify}>Notify!</button> */}
+                <ToastContainer 
+               position="top-center"
+               autoClose={5000}
+               hideProgressBar={false}
+               newestOnTop={false}
+               closeOnClick
+               rtl={false}
+            //    pauseOnFocusLoss
+               draggable
+            //    pauseOnHover
+               theme="light"
+                />
+            </div>
             <div className="page">
                 <div className="homepage">
+
                     <div className="container">
                         <div className="homepageInner">
                             <div className="firstSection">
@@ -28,13 +66,29 @@ export const HomePage = () => {
                                             </div>
                                             <div className="bottom">
                                                 {/* <Link to={ROUTES.PRIVACY}>Privacy & Policy</Link> */}
+
+
                                                 <div className="acceptTerms">
-                                                    <input type="checkbox" id='acceptTerms' />
                                                     <label htmlFor='accceptTerms'>Accept</label>
+                                                    <input type="checkbox" id='acceptTerms'   checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)}/>
                                                 </div>
-                                                <div className="startButton">
-                                                    <button onClick={() => { navigate(ROUTES.CHATROOM) }}>Start</button>
-                                                </div>
+                                                
+                                                {
+                                                    !isCaptcha &&
+                                                        <div className="startButton">
+                                                            <button onClick={buttonOnClick}>Start</button>
+                                                        </div>
+                                        
+                                                }
+                                                {
+                                                    isCaptcha &&
+                                                    <div className="recaptchDiv" >
+                                                        <ReCAPTCHA
+                                                            sitekey="6Lfo1SsmAAAAALCN0fyobiX0we9SpUReB76ecBva"
+                                                            onChange={onChange}
+                                                        />
+                                                    </div>
+                                                }
                                             </div>
                                         </div>
                                     </div>
