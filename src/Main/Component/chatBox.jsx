@@ -1,7 +1,7 @@
 import React from "react";
 import chatProfile from "../../assets/images/chatProfile.png";
 
-export const ChatBox = ({radioId}) => {
+export const ChatBox = ({radioId, itemData}) => {
   return (
     <React.Fragment>
       <div className="singleChatBox">
@@ -9,7 +9,7 @@ export const ChatBox = ({radioId}) => {
           <img src={chatProfile} alt="" />
         </div>
         <div className="title">
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>{itemData.chatName}</p>
         </div>
         <div className="control">
           <div className="toggle">

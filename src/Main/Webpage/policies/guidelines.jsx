@@ -32,7 +32,7 @@ export const GuideLines = () => {
                                         WeWrangle is committed to creating a respectful and inclusive environment for conversations. Treat others
                                         with respect, empathy, and courtesy, even when discussing controversial topics. Avoid personal attacks,
                                         harassment, hate speech, or any form of discriminatory behavior. See our <Link to={ROUTES.TERMS}> Terms and Conditions</Link> and
-                                        <Link to={ROUTES.PRIVACY}>Privacy Policy </Link>for what you can and can’t do while using the site.
+                                        <Link to={ROUTES.PRIVACY}> Privacy Policy </Link>for what you can and can’t do while using the site.
                                     </p>
                                     <p>
                                         We prioritize your safety and the safety of others while using WeWrangle. Do not share personal

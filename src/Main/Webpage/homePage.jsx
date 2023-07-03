@@ -18,10 +18,10 @@ export const HomePage = () => {
 
     const buttonOnClick = () => {
         console.log("functionClicked")
-        if(!isChecked){
+        if (!isChecked) {
             toast.error("Accept Terms and Conditions")
         }
-        else{
+        else {
             setIsCaptcha(true);
         }
     }
@@ -30,17 +30,17 @@ export const HomePage = () => {
         <React.Fragment>
             <div>
                 {/* <button onClick={notify}>Notify!</button> */}
-                <ToastContainer 
-               position="top-center"
-               autoClose={5000}
-               hideProgressBar={false}
-               newestOnTop={false}
-               closeOnClick
-               rtl={false}
-            //    pauseOnFocusLoss
-               draggable
-            //    pauseOnHover
-               theme="light"
+                <ToastContainer
+                    position="top-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    //    pauseOnFocusLoss
+                    draggable
+                    //    pauseOnHover
+                    theme="light"
                 />
             </div>
             <div className="page">
@@ -54,7 +54,13 @@ export const HomePage = () => {
                                         <div className="innerFirst upper">
                                             <h1>About Us</h1>
                                             <div className="aboutUs">
-                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo consectetur nam, atque alias, ullam dolores laboriosam sapiente rem eaque aliquid fugit doloremque, ex ea veniam nobis natus repellat. Ullam tempore labore perspiciatis officiis vel? Odit laudantium officia nostrum, corrupti similique culpa. Doloremque vitae, harum tempore ipsum velit eos tempora veritatis?</p>
+                                                <div className="aboutUsInnerPara">
+                                                    <p>At WeWrangle, we recognize the power of meaningful conversations and the need for a safe and respectful platform to discuss controversial topics. In today's interconnected world, where diverse perspectives and backgrounds intersect, we believe that open dialogue can foster understanding and bridge gaps between individuals. That's why we have developed an innovative chat application that prioritises user safety, moderation, and respectful engagement.
+                                                    </p>
+                                                    <p>
+                                                        We believe that engaging in discussions on contentious topics can be both enlightening and enjoyable. Our application is designed to provide a space where users can freely express themselves and engage in lively debates, all while maintaining a respectful and inclusive environment. By allowing for open dialogue on diverse subjects, we strive to create a platform that stands out from other applications, offering an unparalleled opportunity for intellectual exploration and the exchange of ideas. We are committed to promoting an inclusive space where individuals can voice their opinions while treating others with empathy and understanding, ensuring that every user feels valued and respected.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className="innerFirst lower">
@@ -70,15 +76,15 @@ export const HomePage = () => {
 
                                                 <div className="acceptTerms">
                                                     <label htmlFor='accceptTerms'>Accept</label>
-                                                    <input type="checkbox" id='acceptTerms'   checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)}/>
+                                                    <input type="checkbox" id='acceptTerms' checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)} />
                                                 </div>
-                                                
+
                                                 {
                                                     !isCaptcha &&
-                                                        <div className="startButton">
-                                                            <button onClick={buttonOnClick}>Start</button>
-                                                        </div>
-                                        
+                                                    <div className="startButton">
+                                                        <button onClick={buttonOnClick}>Start</button>
+                                                    </div>
+
                                                 }
                                                 {
                                                     isCaptcha &&

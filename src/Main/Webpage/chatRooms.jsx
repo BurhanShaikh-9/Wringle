@@ -6,9 +6,21 @@ import { ChatBox } from "../Component/chatBox";
 
 export const ChatRoom = () => {
     const navigate = useNavigate();
-   
+    const chatBoxes = [
+      {chatName: "LGBTQ+ rights and discrimination" },
+      {chatName: "Abortion" },
+      {chatName: "Climate change and environmental policy" },
+      {chatName: "Drug Legalisation" },
+      {chatName: "Income inequality and wealth redistribution" },
+      {chatName: "Military spending and foreign policy" },
+      {chatName: "Universal basic income" },
+      {chatName: "Immigration and border security" },
+      {chatName: "Nuclear Energy" },
+      {chatName: "Social Media and Free Speech" },
+      {chatName: "Artificial Intelligence" },
+      {chatName: "Vaccines and mandates" },
 
-    const chatBoxes = Array(5).fill(null);
+  ];
   return (
     <React.Fragment>
       <div className="page">
@@ -32,7 +44,7 @@ export const ChatRoom = () => {
                 {
                     chatBoxes.map((item, key) => {
                         return(
-                            <ChatBox radioId={key} key={key}/>
+                            <ChatBox radioId={key} key={key} itemData={item}/>
                         )
                     })
                 }

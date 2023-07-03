@@ -167,8 +167,14 @@
 }
 .page .homepage .homepageInner .firstSection .inner .wrapper .innerFirst .aboutUs {
   border: 1px solid rgb(231, 231, 231);
-  padding: 30px 40px;
+  padding-right: 20px;
   border-radius: 40px;
+}
+.page .homepage .homepageInner .firstSection .inner .wrapper .innerFirst .aboutUsInnerPara {
+  margin: 30px 0 30px 0;
+  padding: 0 20px 0 40px;
+  overflow-y: scroll;
+  height: 420px;
 }
 .page .homepage .homepageInner .firstSection .inner .wrapper .innerFirst .termsConditions {
   border: 1px solid rgb(231, 231, 231);
@@ -294,7 +300,10 @@
 .page .chatRoom .allChatBox .singleChatBox {
   border-radius: 25px;
   padding: 30px 20px;
+  text-align: center;
+  min-height: 302px;
   display: flex;
+  max-width: 280px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -318,6 +327,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 55px;
 }
 .page .chatRoom .allChatBox .singleChatBox .title p {
   font-weight: bold;
