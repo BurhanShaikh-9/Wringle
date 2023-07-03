@@ -186,7 +186,6 @@
   margin-bottom: 50px;
 
   .homepage {
-   
     .homepageInner {
       display: flex;
       justify-content: center;
@@ -265,8 +264,7 @@
                 @include blueButton();
               }
             }
-            .recaptchDiv{
-                    
+            .recaptchDiv {
             }
           }
         }
@@ -698,18 +696,54 @@
     }
   }
   .privacyPolicy {
+    .privacyHeading {
+      text-align: center;
+      color: #171c63;
+      margin-bottom: 30px;
+    }
+    .privacyAbout {
+      text-align: center;
+      margin-bottom: 20px;
+    }
     .privacyInner {
       h1 {
         color: #171c63;
         margin-bottom: 30px;
       }
+      h3 {
+        margin: 20px 0;
+        color: #171c63;
+      }
       .aboutPara {
+        margin-bottom: 10px;
+      }
+      p {
         margin-bottom: 10px;
       }
       ul {
         list-style: decimal;
         li {
           margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  .guidelines {
+    .guideInner {
+      .guideHeading {
+        text-align: center;
+        color: #171c63;
+        margin-bottom: 30px;
+      }
+      .guideBody{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .guidBodyInner{
+        width: 70%; 
+        p{
+          margin-bottom: 30px;
         }
       }
     }

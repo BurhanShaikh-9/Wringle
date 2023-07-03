@@ -3,5 +3,6 @@ export const ROUTES = {
     CHATROOM: "chat-room",
     CHATSCREEN: "/chat-screen",
     PRIVACY: "/privacy-policy",
-    TERMS: "/terms-and-condition"
+    TERMS: "/terms-and-condition",
+    GUIDE: "guidelines"
 }

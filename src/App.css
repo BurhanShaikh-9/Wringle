@@ -618,11 +618,27 @@
   font-size: 13px;
   border-radius: 20px;
 }
+.page .privacyPolicy .privacyHeading {
+  text-align: center;
+  color: #171c63;
+  margin-bottom: 30px;
+}
+.page .privacyPolicy .privacyAbout {
+  text-align: center;
+  margin-bottom: 20px;
+}
 .page .privacyPolicy .privacyInner h1 {
   color: #171c63;
   margin-bottom: 30px;
 }
+.page .privacyPolicy .privacyInner h3 {
+  margin: 20px 0;
+  color: #171c63;
+}
 .page .privacyPolicy .privacyInner .aboutPara {
+  margin-bottom: 10px;
+}
+.page .privacyPolicy .privacyInner p {
   margin-bottom: 10px;
 }
 .page .privacyPolicy .privacyInner ul {
@@ -630,6 +646,22 @@
 }
 .page .privacyPolicy .privacyInner ul li {
   margin-bottom: 10px;
+}
+.page .guidelines .guideInner .guideHeading {
+  text-align: center;
+  color: #171c63;
+  margin-bottom: 30px;
+}
+.page .guidelines .guideInner .guideBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page .guidelines .guideInner .guidBodyInner {
+  width: 70%;
+}
+.page .guidelines .guideInner .guidBodyInner p {
+  margin-bottom: 30px;
 }
 
 .modalMain .modalBody p svg {
