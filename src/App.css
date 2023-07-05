@@ -6,24 +6,51 @@
   font-family: "poppinSemiBold";
   src: url("/src/assets/fonts/Poppins-SemiBold.ttf") format("truetype");
 }
+/* WebKit (Chrome, Safari, Opera) */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: #ec6349;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
+  background: #e94929;
+}
+
+/* Firefox */
+/* Width */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #ec6349 #f1f1f1;
+}
+
+/* Track */
+html {
+  overflow-y: scroll;
+  scrollbar-track-color: #f1f1f1;
+  scrollbar-track-radius: 10px;
+}
+
+/* Handle */
+html {
+  scrollbar-color: #ec6349 #f1f1f1;
+}
+
+html::-moz-scrollbar-thumb {
+  border-radius: 10px;
+  background: #ec6349;
+}
+
+/* Handle on hover */
+html::-moz-scrollbar-thumb:hover {
   background: #e94929;
 }
 
@@ -798,6 +825,40 @@
   cursor: pointer;
   position: relative;
   outline: none;
+}
+
+.wrapper2 {
+  flex-direction: column;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.wrapper2 .upper2 {
+  width: 100% !important;
+}
+.wrapper2 .lower2 {
+  width: 100% !important;
+}
+.wrapper2 .aboutUsInnerPara2 {
+  height: 200px !important;
+}
+.wrapper2 .termsConditions2 {
+  padding: 30px 20px !important;
+}
+.wrapper2 .termsConditions2 p {
+  height: 200px !important;
+  padding-right: 30px !important;
+}
+
+.imageAboutDiv img {
+  width: 328px;
+  border-radius: 30px;
+}
+
+.aboutOuter {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  gap: 30px;
 }
 
 @media only screen and (max-width: 1200px) {
