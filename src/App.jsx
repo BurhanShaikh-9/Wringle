@@ -12,7 +12,7 @@ import { GuideLines } from './Main/Webpage/policies/guidelines';
 import { HomePage2 } from './Main/Webpage/homeV2';
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
