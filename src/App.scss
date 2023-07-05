@@ -99,6 +99,14 @@
         justify-content: flex-start;
         align-items: center;
 
+        .logo1{
+          width: 35px;
+          margin-right: 10px;
+        }
+        .logo2{
+          margin-top: 3px;
+          width: 75px;
+        }
         p {
           color: #171c63;
           font-weight: bold;
@@ -322,7 +330,7 @@
       justify-content: space-around;
       align-items: center;
       flex-wrap: wrap;
-      width: 95.5%;
+      width: 100%;
       @include borderAllShadow();
       padding: 20px;
       // gap: 10px;
@@ -359,13 +367,15 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 25px;
+      width: 100%;
       .singleChatBox {
+
         border-radius: 25px;
         padding: 30px 20px;
         text-align: center;
         min-height: 302px;
         display: flex;
-        max-width: 280px;
+        max-width: 470px;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -387,7 +397,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 55px;
+          // height: 55px;
           p {
             font-weight: bold;
           }
@@ -819,6 +829,66 @@
     }
   }
 }
+.modalMain2 {
+  .modalBody {
+    p {
+      svg {
+        font-size: 27px;
+      }
+    }
+    .reportsToggle {
+      margin: 10px 30px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      .reportValues {
+        label {
+          display: inline-block;
+          // border: 1px solid #ccc;
+          font-size: 14px;
+          border-radius: 20px;
+          padding: 8px 12px;
+          background-color: #f1f1f18c;
+          cursor: pointer;
+          &:hover {
+            background-color: #e6e6e6;
+          }
+        }
+        input[type="radio"] {
+          display: none;
+        }
+        input[type="radio"]:checked + label,
+        .Checked + label {
+          background: #e94929;
+          color: white;
+        }
+      }
+    }
+    .reportMessage {
+      margin: 10px 30px;
+      textArea {
+        border-radius: 20px;
+        resize: none;
+        outline: none;
+        padding: 10px 10px;
+        @include borderAllShadow;
+        width: 100%;
+      }
+    }
+    .submitButton {
+      margin: 10px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        @include blueButton();
+      }
+    }
+  }
+}
+
 
 @media only screen and (max-width: 1200px) {
   .container {
@@ -927,7 +997,7 @@
         width: 60%;
         gap: 30px;
         .logo {
-          p {
+          .logo2 {
             display: none;
           }
         }
@@ -966,9 +1036,12 @@
 }
 
 @media only screen and (max-width: 576px) {
+  .page .chatRoom .allChatBox .singleChatBox .title p{
+    font-size: 12px;
+  }
   .container {
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
   .numbers {
     font-size: 20px !important;
@@ -1033,6 +1106,44 @@
   }
 
   .modalMain {
+    .modalHeaderTitle {
+      font-size: 16px !important;
+    }
+    .modalBody {
+      .bodyTitle {
+        font-size: 14px;
+      }
+      .reportsToggle {
+        margin: 10px 10px !important;
+        .reportValues {
+          label {
+            font-size: 12px;
+          }
+        }
+      }
+      .reportMessage {
+        margin: 10px 10px !important;
+        textArea {
+          border-radius: 20px;
+          resize: none;
+          outline: none;
+          padding: 10px 10px;
+          @include borderAllShadow;
+          width: 100%;
+        }
+      }
+      .submitButton {
+        margin: 10px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          @include blueButton();
+        }
+      }
+    }
+  }
+  .modalMain2{
     .modalHeaderTitle {
       font-size: 16px !important;
     }

@@ -6,8 +6,6 @@ import { AiOutlineExclamationCircle } from 'react-icons/ai';
 import { GrCaretNext } from 'react-icons/gr';
 import { FiArrowRight } from 'react-icons/fi';
 
-
-
 import Modal from 'react-bootstrap/Modal';
 
 import { FiMoreHorizontal } from 'react-icons/fi';
@@ -19,8 +17,12 @@ export const ChatScreen = () => {
   const [reportButton, setReportButton] = useState(false);
   const [reportButton2, setReportButton2] = useState(false);
   const [show, setShow] = useState(false);
+  const [show2, setShow2] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleClose2 = () => setShow2(false);
+  const handleShow2 = () => setShow2(true);
 
   const [reportButtonVisible, setReportButtonVisible] = useState(false);
 
@@ -87,7 +89,7 @@ export const ChatScreen = () => {
                           {
                             reportButton2 &&
                             <div className="innerButton">
-                              <button className="reportInner" onClick={handleShow}> <BsFillFlagFill /> Report</button>
+                              <button className="reportInner" onClick={handleShow2}> <BsFillFlagFill /> Report</button>
                             </div>
                           }
                         </div>
@@ -130,7 +132,61 @@ export const ChatScreen = () => {
         className="modalMain"
       >
         <Modal.Header closeButton>
-          <Modal.Title className="modalHeaderTitle">Find Support or Report Page</Modal.Title>
+          <Modal.Title className="modalHeaderTitle">Report User</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="modalBody">
+          <p className="bodyTitle"> <AiOutlineExclamationCircle /> Help us understand what's happening.</p>
+          <div className="reportsToggle">
+            <div className="reportValues">
+              <input type="radio" id="hateSpeech" name="reported" />
+              <label htmlFor="hateSpeech">Hate Speech</label>
+            </div>
+            <div className="reportValues">
+              <input type="radio" id="nudity" name="reported" />
+              <label htmlFor="nudity">Nudity or Sexual Content</label>
+            </div>
+            <div className="reportValues">
+              <input type="radio" id="violence" name="reported" />
+              <label htmlFor="violence">Violence</label>
+            </div>
+            <div className="reportValues">
+              <input type="radio" id="harassment" name="reported" />
+              <label htmlFor="harassment">Harassment</label>
+            </div>
+            <div className="reportValues">
+              <input type="radio" id="Scams" name="reported" />
+              <label htmlFor="Scams">Scams and Fake</label>
+            </div>
+            <div className="reportValues">
+              <input type="radio" id="intellectual" name="reported" />
+              <label htmlFor="intellectual">Intellectual Property</label>
+            </div>
+            <div className="reportValues">
+              <input type="radio" id="others" name="reported" />
+              <label htmlFor="others">Other</label>
+            </div>
+          </div>
+          <div className="reportMessage">
+            <textarea rows="10"></textarea>
+          </div>
+          <div className="submitButton">
+            <button onClick={handleClose}>
+              Submit
+            </button>
+          </div>
+        </Modal.Body>
+
+      </Modal>
+
+      <Modal
+        show={show2}
+        onHide={handleClose2}
+        backdrop="static"
+        keyboard={false}
+        className="modalMain2"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title className="modalHeaderTitle">Report Chat</Modal.Title>
         </Modal.Header>
         <Modal.Body className="modalBody">
           <p className="bodyTitle"> <AiOutlineExclamationCircle /> Help us understand what's happening.</p>
