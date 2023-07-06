@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ROUTES } from '../../utils/Routes';
-// import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -99,7 +99,7 @@ export const HomePage = () => {
                                                     <input type="checkbox" id='acceptTerms' checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)} />
                                                 </div>
 
-                                                {/* {
+                                                {
                                                     !isCaptcha &&
                                                     <div className="startButton">
                                                         <button onClick={buttonOnClick}>Start</button>
@@ -114,10 +114,7 @@ export const HomePage = () => {
                                                             onChange={onChange}
                                                         />
                                                     </div>
-                                                } */}
-                                                 <div className="startButton">
-                                                        <button onClick={()=>{navigate(ROUTES.CHATROOM)}}>Start</button>
-                                                    </div>
+                                                }
                                             </div>
                                         </div>
                                     </div>

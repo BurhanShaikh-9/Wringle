@@ -69,7 +69,8 @@ html::-moz-scrollbar-thumb:hover {
 }
 
 .container {
-  max-width: 100%;
+  max-width: 1500px;
+  width: 100%;
   padding-right: 100px;
   padding-left: 100px;
   margin-right: auto;
@@ -473,10 +474,26 @@ html::-moz-scrollbar-thumb:hover {
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
           }
+          .toggle-label-left:hover{
+            background-color: #e94929;
+            color: white;
+          }
 
           .toggle-label-right {
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
+          }
+          .toggle-label-left:hover{
+            background-color: #e94929;
+            color: white;
+          }
+          .toggle-label-right:hover{
+            background-color: #e94929;
+            color: white;
+          }
+          .toggle-label:hover {
+            background-color: #e94929;
+            color: white;
           }
 
           .toggle-input:checked + .toggle-label {

@@ -55,7 +55,8 @@ html::-moz-scrollbar-thumb:hover {
 }
 
 .container {
-  max-width: 100%;
+  max-width: 1500px;
+  width: 100%;
   padding-right: 100px;
   padding-left: 100px;
   margin-right: auto;
@@ -402,9 +403,25 @@ html::-moz-scrollbar-thumb:hover {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
+.page .chatRoom .allChatBox .singleChatBox .control .toggle-label-left:hover {
+  background-color: #e94929;
+  color: white;
+}
 .page .chatRoom .allChatBox .singleChatBox .control .toggle-label-right {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+.page .chatRoom .allChatBox .singleChatBox .control .toggle-label-left:hover {
+  background-color: #e94929;
+  color: white;
+}
+.page .chatRoom .allChatBox .singleChatBox .control .toggle-label-right:hover {
+  background-color: #e94929;
+  color: white;
+}
+.page .chatRoom .allChatBox .singleChatBox .control .toggle-label:hover {
+  background-color: #e94929;
+  color: white;
 }
 .page .chatRoom .allChatBox .singleChatBox .control .toggle-input:checked + .toggle-label {
   color: #fff;
