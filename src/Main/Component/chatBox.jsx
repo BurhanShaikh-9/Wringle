@@ -6,7 +6,7 @@ export const ChatBox = ({radioId, itemData}) => {
     <React.Fragment>
       <div className="singleChatBox">
         <div className="picture">
-          <img src={chatProfile} alt="" />
+          <img src={itemData?.image} alt="" />
         </div>
         <div className="title">
           <p>{itemData.chatName}</p>
