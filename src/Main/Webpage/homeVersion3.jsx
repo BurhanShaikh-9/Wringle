@@ -68,9 +68,9 @@ export const HomePage3 = () => {
                                                         </p>
                                                     </div>
                                                 </div>
-                                                <div className="imageAboutDiv">
+                                                {/* <div className="imageAboutDiv">
                                                     <img src={aboutImg} alt="" />
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </div>
                                         <div className="innerFirst lower lower2">
