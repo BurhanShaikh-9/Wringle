@@ -95,7 +95,8 @@ export const HomePage = () => {
 
 
                                                 <div className="acceptTerms">
-                                                    <label htmlFor='accceptTerms'>Accept</label>
+                                                <label htmlFor='accceptTerms'>I Agree to the Terms of Service</label>
+
                                                     <input type="checkbox" id='acceptTerms' checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)} />
                                                 </div>
 
