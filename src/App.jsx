@@ -10,6 +10,7 @@ import { PrivacyPolicy } from './Main/Webpage/policies/privacyPolicy';
 import { TermsCondition } from './Main/Webpage/policies/termsCondition';
 import { GuideLines } from './Main/Webpage/policies/guidelines';
 import { HomePage2 } from './Main/Webpage/homeV2';
+import { HomePage3 } from './Main/Webpage/homev3';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
           <Route element={<Layout />}>
             <Route path={ROUTES.HOMEPAGE} element={<HomePage />} />
             <Route path="homev2" element={<HomePage2 />} />
-
+            <Route path="homev3" element={<HomePage3 />} />
             <Route path={ROUTES.CHATROOM} element={<ChatRoom />} />
             <Route path={ROUTES.CHATSCREEN} element={<ChatScreen />} />
             <Route path={ROUTES.PRIVACY} element={<PrivacyPolicy />} />

@@ -964,6 +964,17 @@ html::-moz-scrollbar-thumb:hover {
   gap: 30px;
 }
 
+.BannerSection{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  img{
+    width: 100%;
+    border-radius: 50px;
+  }
+}
 @media only screen and (max-width: 1200px) {
   .container {
     padding-right: 120px;
