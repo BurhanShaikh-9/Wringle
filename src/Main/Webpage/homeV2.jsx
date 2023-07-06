@@ -70,6 +70,22 @@ export const HomePage2 = () => {
                                                 </div>
                                             </div>
                                         </div>
+                                        {
+                                                    !isCaptcha &&
+                                                    <div className="startButton">
+                                                        <button onClick={buttonOnClick}>Start</button>
+                                                    </div>
+
+                                                }
+                                                {
+                                                    isCaptcha &&
+                                                    <div className="recaptchDiv" >
+                                                        <ReCAPTCHA
+                                                            sitekey="6Lfo1SsmAAAAALCN0fyobiX0we9SpUReB76ecBva"
+                                                            onChange={onChange}
+                                                        />
+                                                    </div>
+                                                }
                                         <div className="innerFirst lower lower2">
                                             <h1>Guide Lines</h1>
                                             <div className="termsConditions termsConditions2">
@@ -106,22 +122,7 @@ export const HomePage2 = () => {
                                                     <input type="checkbox" id='acceptTerms' checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)} />
                                                 </div>
 
-                                                {
-                                                    !isCaptcha &&
-                                                    <div className="startButton">
-                                                        <button onClick={buttonOnClick}>Start</button>
-                                                    </div>
-
-                                                }
-                                                {
-                                                    isCaptcha &&
-                                                    <div className="recaptchDiv" >
-                                                        <ReCAPTCHA
-                                                            sitekey="6Lfo1SsmAAAAALCN0fyobiX0we9SpUReB76ecBva"
-                                                            onChange={onChange}
-                                                        />
-                                                    </div>
-                                                }
+                                              
                                             </div>
                                         </div>
                                     </div>

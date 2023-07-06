@@ -282,6 +282,22 @@ html::-moz-scrollbar-thumb:hover {
               }
             }
           }
+          .acceptTerms {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+          }
+          .startButton {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+
+            button {
+              @include blueButton();
+            }
+          }
 
           .bottom {
             display: flex;

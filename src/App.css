@@ -221,6 +221,29 @@ html::-moz-scrollbar-thumb:hover {
   height: 350px;
   overflow-y: auto;
 }
+.page .homepage .homepageInner .firstSection .inner .acceptTerms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.page .homepage .homepageInner .firstSection .inner .startButton {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.page .homepage .homepageInner .firstSection .inner .startButton button {
+  color: white;
+  background-color: #171c63;
+  border-radius: 30px;
+  font-size: 16px;
+  padding: 10px 30px;
+  box-shadow: inset 0px 0px 8px 2px rgba(255, 255, 255, 0.36);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
 .page .homepage .homepageInner .firstSection .inner .bottom {
   display: flex;
   justify-content: space-around;
