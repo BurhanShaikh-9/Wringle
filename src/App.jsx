@@ -10,7 +10,8 @@ import { PrivacyPolicy } from './Main/Webpage/policies/privacyPolicy';
 import { TermsCondition } from './Main/Webpage/policies/termsCondition';
 import { GuideLines } from './Main/Webpage/policies/guidelines';
 import { HomePage2 } from './Main/Webpage/homeV2';
-import { HomePage3 } from './Main/Webpage/homev3';
+import { HomePage3 } from './Main/Webpage/homeVersion3';
+
 
 function App() {
 
