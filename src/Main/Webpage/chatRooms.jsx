@@ -54,7 +54,7 @@ export const ChatRoom = () => {
                 {
                     chatBoxes.map((item, key) => {
                         return(
-                            <ChatBox radioId={key} key={key} itemData={item}/>
+                            <ChatBox key={key} radioId={key} itemData={item}/>
                         )
                     })
                 }

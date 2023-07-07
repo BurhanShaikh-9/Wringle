@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import person1 from "../../assets/images/girl1.png";
 import { BsSendFill, BsFillFlagFill } from 'react-icons/bs';
 import { BiLoader } from 'react-icons/bi';
@@ -13,16 +13,35 @@ import { FiMoreHorizontal } from 'react-icons/fi';
 // import Button from 'react-bootstrap/Button';
 
 export const ChatScreen = () => {
-
   const [reportButton, setReportButton] = useState(false);
-  const [reportButton2, setReportButton2] = useState(false);
   const [show, setShow] = useState(false);
-  const [show2, setShow2] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const moreButtonRef = useRef(null);
+  const innerButtonRef = useRef(null);
 
-  const handleClose2 = () => setShow2(false);
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        moreButtonRef.current && !moreButtonRef.current.contains(event.target) &&
+        innerButtonRef.current && !innerButtonRef.current.contains(event.target)
+      ) {
+        setReportButton(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
+  const [reportButton2, setReportButton2] = useState(false);
+  const [show2, setShow2] = useState(false);
   const handleShow2 = () => setShow2(true);
+  const handleClose2 = () => setShow2(false);
 
   const [reportButtonVisible, setReportButtonVisible] = useState(false);
 
@@ -48,13 +67,12 @@ export const ChatScreen = () => {
                 <div className="person1">
                   <img src={person1} alt="" />
                   <div className="ReportButton">
-                    <button className="moreButton" onClick={() => { setReportButton(!reportButton) }}><FiMoreHorizontal /></button>
-                    {
-                      reportButton &&
-                      <div className="innerButton">
-                        <button className="reportInner" onClick={handleShow}> <BsFillFlagFill /> Report</button>
+                    <button className="moreButton" ref={moreButtonRef} onClick={() => setReportButton(!reportButton)}><FiMoreHorizontal /></button>
+                    {reportButton && ( 
+                      <div className="innerButton" ref={innerButtonRef}>
+                        <button className="reportInner" onClick={handleShow}><BsFillFlagFill /> Report</button>
                       </div>
-                    }
+                    )}
                   </div>
                 </div>
               </div>
@@ -85,7 +103,7 @@ export const ChatScreen = () => {
 
                         <div className={`ReportButton ${reportButtonVisible ? 'visible' : ''}`}>
                           <button className="moreButton" onClick={() => { setReportButton2(!reportButton2) }}><FiMoreHorizontal /></button>
-                          {console.log(reportButton2)}
+                          {/* {console.log(reportButton2)} */}
                           {
                             reportButton2 &&
                             <div className="innerButton">
