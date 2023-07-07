@@ -21,7 +21,7 @@ export const ChatBox = ({radioId, itemData}) => {
               type="radio"
             />
             <label htmlFor={`toggle11-${radioId}`} className="toggle-label toggle-label-left">
-              With
+              For
             </label>
 
             <input
