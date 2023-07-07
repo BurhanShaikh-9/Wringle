@@ -50,7 +50,13 @@ export const ChatScreen = () => {
   };
 
   const handleMouseLeave = () => {
-    setReportButtonVisible(false);
+    if(reportButton2){
+      setReportButtonVisible(true);
+
+    }
+    else{
+      setReportButtonVisible(false);
+    }
   };
 
 
