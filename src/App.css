@@ -212,6 +212,9 @@ html::-moz-scrollbar-thumb:hover {
   overflow-y: scroll;
   height: 520px;
 }
+.page .homepage .homepageInner .firstSection .inner .wrapper .innerFirst .aboutUsInnerPara p {
+  line-height: 2;
+}
 .page .homepage .homepageInner .firstSection .inner .wrapper .innerFirst .termsConditions {
   border: 1px solid rgb(231, 231, 231);
   padding: 30px 40px;
@@ -220,6 +223,7 @@ html::-moz-scrollbar-thumb:hover {
 .page .homepage .homepageInner .firstSection .inner .wrapper .innerFirst .termsConditions p {
   height: 350px;
   overflow-y: auto;
+  line-height: 2;
 }
 .page .homepage .homepageInner .firstSection .inner .acceptTerms {
   display: flex;

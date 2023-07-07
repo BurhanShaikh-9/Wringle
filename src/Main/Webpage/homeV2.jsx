@@ -72,7 +72,7 @@ export const HomePage2 = () => {
                                         </div>
 
                                         <div className="innerFirst lower lower2">
-                                            <h1>Guide Lines</h1>
+                                            <h1>Guidelines</h1>
                                             <div className="termsConditions termsConditions2">
                                                 <p>To ensure a safe and appropriate user experience, WeWrangle requires all users to be 18 years or older.
                                                     Please refer to our <Link to={ROUTES.TERMS}>Terms and Conditions</Link>  for comprehensive information regarding eligibility and usage. If
